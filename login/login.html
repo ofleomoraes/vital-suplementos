@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Tela de Login</title>
+  <link rel="stylesheet" href=css/estilos.css
+
+</head>
+<body>
+
+    <header>
+    <nav>
+      <ul>
+        <li><a href="index.html">Início</a></li>
+        <li><a href="trocar-senha.html">Trocar Senha</a></li>
+        <li><a href="dashboard.html">Dashboard</a></li>
+        <li><a href="indicacao.html">Indicação</a></li>
+        <li><a href="gamificacao.html">Gamificação</a></li>
+        <li><a href="produtos.html">Produtos</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <div class="login-container">
+    <h2>Faça login</h2>
+    <form id="loginForm">
+      <div class="input-group">
+        <label for="email">E-mail</label>
+        <input type="email" id="email" name="email" required />
+      </div>
+      <div class="input-group">
+        <label for="password">Senha</label>
+        <input type="password" id="password" name="password" required />
+      </div>
+      <div class="button-group">
+        <button type="submit">Entrar</button>
+      </div>
+      <div class="links">
+        <a href="/esqueci-senha.html">Esqueci minha senha</a>
+      </div>
+      <div class="links">
+        <a href="/cadastro.html">Criar uma conta</a>
+  </div>
+    </form>
+  </div>
+
+  <script>
+    // Função para simular autenticação e redirecionamento
+    document.getElementById('loginForm').addEventListener('submit', function(e) {
+      e.preventDefault();
+
+      const email = e.target.email.value.trim();
+      const password = e.target.password.value.trim();
+
+      // Aqui você pode adicionar uma validação mais robusta ou chamada para backend
+      if (email === '' || password === '') {
+        alert('Por favor, preencha todos os campos.');
+        return;
+      }
+
+      // Simulação: usuário e senha fixos para teste
+      if (email === 'usuario@exemplo.com' && password === '123456') {
+        alert('Login realizado com sucesso!');
+        window.location.href = 'dashboard.html'; // Redireciona para página principal
+      } else {
+        alert('E-mail ou senha inválidos.');
+      }
+    });
+  </script>
+
+  <footer>
+    <p>&copy; 2025 Loja de Suplementos. Todos os direitos reservados.</p>
+  </footer>
+
+</body>
+</html>

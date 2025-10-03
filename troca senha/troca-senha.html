@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Trocar Senha</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+
+    <header>
+    <nav>
+      <ul>
+        <li><a href="index.html">Início</a></li>
+        <li><a href="dashboard.html">Dashboard</a></li>
+        <li><a href="indicacao.html">Indicação</a></li>
+        <li><a href="gamificacao.html">Gamificação</a></li>
+        <li><a href="produtos.html">Produtos</a></li>
+        <li><a href="login.html">Login</a></li>
+        <li><a href="cadastro.html">Cadastro</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <div class="login-container">
+    <h2>Trocar Senha</h2>
+    <form id="changePasswordForm">
+      <div class="input-group">
+        <label for="email">E-mail</label>
+        <input type="email" id="email" name="email" required />
+      </div>
+      <div class="input-group">
+        <label for="newPassword">Nova Senha</label>
+        <input type="password" id="newPassword" name="newPassword" required />
+      </div>
+      <div class="input-group">
+        <label for="confirmNewPassword">Confirmar Nova Senha</label>
+        <input type="password" id="confirmNewPassword" name="confirmNewPassword" required />
+      </div>
+      <div class="button-group">
+        <button type="submit">Atualizar Senha</button>
+      </div>
+      <div class="links">
+        <a href="login.html">Login</a>
+      </div>
+    </form>
+  </div>
+
+  <script>
+    document.getElementById('changePasswordForm').addEventListener('submit', function(e) {
+      e.preventDefault();
+
+      const email = e.target.email.value.trim();
+      const newPassword = e.target.newPassword.value.trim();
+      const confirmNewPassword = e.target.confirmNewPassword.value.trim();
+
+      if (!email || !newPassword || !confirmNewPassword) {
+        alert('Por favor, preencha todos os campos.');
+        return;
+      }
+
+      if (newPassword !== confirmNewPassword) {
+        alert('A nova senha e a confirmação não coincidem.');
+        return;
+      }
+
+      // Aqui você pode adicionar a lógica para atualizar a senha no backend
+      alert('Senha atualizada com sucesso!');
+      window.location.href = 'login.html';
+    });
+  </script>
+
+  <footer>
+    <p>&copy; 2025 Loja de Suplementos. Todos os direitos reservados.</p>
+  </footer>
+  
+</body>
+</html>
