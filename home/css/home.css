@@ -60,9 +60,15 @@ header {
   padding: var(--spacing-md) var(--spacing-xl);
 }
 
+.logo {
+  height: 50px;   /* ajuste a altura da logo */
+  width: auto;
+  margin-right: 2rem; /* separação do menu */
+}
+
 nav {
   display: flex;
-  justify-content: space-between;
+/*  justify-content: space-between; */
   align-items: center;
 }
 
@@ -81,6 +87,12 @@ nav a {
 
 nav a:hover {
   color: var(--color-link-hover);
+}
+
+.user-menu {
+  display: flex;
+  gap: var(--spacing-lg);
+  margin-left: auto; /* empurra o menu do usuário para a direita */
 }
 
 /* ====== BANNER ====== */
@@ -109,27 +121,35 @@ nav a:hover {
 
 /* ====== SEÇÃO SOBRE ====== */
 #sobre {
-  padding: var(--spacing-xxl) var(--spacing-lg);
+  max-width: 1200px;
+  margin: 80px auto;
+  padding: 60px 40px;
+  background-color: #111; /* fundo escuro para destacar */
+  color: #fff;            /* texto branco */
   text-align: center;
-  background-color: var(--color-sobre-bg);
+  border-radius: 12px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.4);
 }
 
 #sobre h2 {
-  font-size: arial;
+  font-size: 2.5rem;
+  margin-bottom: 25px;
+  color: #ccff00; /* cor da marca */
   text-transform: uppercase;
-  margin-bottom: var(--spacing-lg);
-  color: var(--color-text-dark);
-}
-
-#sobre img {
-  border-radius: var(--border-radius-sm);
-  margin-bottom: var(--spacing-md);
+  letter-spacing: 1px;
 }
 
 #sobre p {
-  max-width: 700px;
+  font-size: 1.2rem;
+  line-height: 1.8;
+  color: #ddd;
+  max-width: 900px;
   margin: 0 auto;
-  color: var(--color-text-medium);
+}
+
+#sobre strong {
+  color: #ccff00; /* destaque na cor da marca */
+  font-weight: bold;
 }
 
 
@@ -148,14 +168,17 @@ nav a:hover {
 }
 
 .texto-filiados h2 {
+  font-family: 'Anantason', sans-serif;
+  text-align: center;
   text-transform: uppercase;
   font-size: 2rem;
-  margin-bottom: 15px;
+  margin-bottom: 2rem;
 }
 
 .texto-filiados p {
-  font-size: 1.8rem;
-  margin-bottom: 20px;
+  text-align: center;
+  font-size: 1.5rem;
+  margin-bottom: 5rem;
   line-height: 1.5;
 }
 
@@ -167,8 +190,10 @@ nav a:hover {
   background-color: #ccff00;
   color: #111;
   font-weight: bold;
+  font-family: 'Anantason', sans-serif;
+  text-transform: uppercase;
   font-size: 1.2rem;          /* aumenta o texto do botão */
-  border-radius: 6px;
+  border-radius: 15px;
   text-decoration: none;
   text-align: center;         /* garante alinhamento do texto */
   transition: background-color 0.3s ease, transform 0.3s ease;
