@@ -3,26 +3,29 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="/home/css/home.css">
   <title>Loja de Suplementos - Index</title>
 </head>
 <body>
   <!-- Header com navegação -->
-  <header>
-    <nav>
-      <ul>
-        <li><a href="index.html">Início</a></li>
-        <li><a href="dashboard.html">Dashboard</a></li>
-        <li><a href="indicacao.html">Indicação</a></li>
-        <li><a href="gamificacao.html">Gamificação</a></li>
-        <li><a href="produtos.html">Produtos</a></li>
-        <li><a href="login.html">Login</a></li>
-        <li><a href="cadastro.html">Cadastro</a></li>
-      </ul>
-    </nav>
-  </header>
+<header>
+  <nav>
+    <ul class="menu">
+      <li><a href="/home/index.html">Início</a></li>
+      <li><a href="dashboard.html">Dashboard</a></li>
+      <li><a href="indicacao.html">Indicação</a></li>
+      <li><a href="gamificacao.html">Gamificação</a></li>
+      <li><a href="produtos.html">Produtos</a></li>
+    </ul>
+    <ul class="user-menu">
+      <li><a href="/login/login.html">Login</a></li>
+      <li><a href="cadastro.html">Cadastro</a></li>
+    </ul>
+  </nav>
+</header>
 
   <!-- Banner -->
-  <section id="banner">
+<section id="banner">
   <img src="/home/img/banner-principal-vital.jpg" alt="Banner da loja de suplementos" width="100%" />
   <h1>Bem-vindo à Loja de Suplementos</h1>
   <p>Aqui você encontra os melhores suplementos com benefícios exclusivos para filiados.</p>
@@ -36,6 +39,21 @@
     Nossa loja é especializada em suplementos de alta qualidade. 
     Participando do programa de filiados, você pode indicar amigos, acumular pontos e ganhar benefícios exclusivos.
   </p>
+</section>
+
+<section id="filiados-banner">
+  <img src="/home/img/vs-banner-filiados.svg" alt="Programa de Filiados Vital" width="100%"/>
+  
+  <!-- Texto sobreposto -->
+  <div class="texto-filiados">
+    <h2>Venha ser um filiado da Vital Suplementos</h2>
+    <p>
+      Participe do nosso programa de filiados e aproveite todas as vantagens:
+      sistema de indicação por link, acúmulo de pontos ou valores por cada indicação,
+      além de uma sessão de bonificação com indicadores de desempenho.
+    </p>
+    <a href="cadastro-filiado.html" class="btn-filiado">Quero me cadastrar</a>
+  </div>
 </section>
 
 <!-- Produtos -->

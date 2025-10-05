@@ -4,24 +4,27 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Tela de Login</title>
-  <link rel="stylesheet" href=css/estilos.css
+  <link rel="stylesheet" href="/login/css/login2.css">
 
 </head>
 <body>
 
-    <header>
-    <nav>
-      <ul>
-        <li><a href="index.html">Início</a></li>
-        <li><a href="trocar-senha.html">Trocar Senha</a></li>
-        <li><a href="dashboard.html">Dashboard</a></li>
-        <li><a href="indicacao.html">Indicação</a></li>
-        <li><a href="gamificacao.html">Gamificação</a></li>
-        <li><a href="produtos.html">Produtos</a></li>
-      </ul>
-    </nav>
-  </header>
-
+<header>
+  <nav>
+    <ul class="menu">
+      <li><a href="/home/index.html">Início</a></li>
+      <li><a href="dashboard.html">Dashboard</a></li>
+      <li><a href="indicacao.html">Indicação</a></li>
+      <li><a href="gamificacao.html">Gamificação</a></li>
+      <li><a href="produtos.html">Produtos</a></li>
+    </ul>
+    <ul class="user-menu">
+      <li><a href="/login/login.html">Login</a></li>
+      <li><a href="cadastro.html">Cadastro</a></li>
+    </ul>
+  </nav>
+</header>
+<main>
   <div class="login-container">
     <h2>Faça login</h2>
     <form id="loginForm">
@@ -44,6 +47,8 @@
   </div>
     </form>
   </div>
+</main>
+
 
   <script>
     // Função para simular autenticação e redirecionamento
