@@ -1,6 +1,6 @@
-/* ====== VARIÁVEIS ====== */
+
 :root {
-  /* Cores */
+
   --color-background-dark: #1c1c1c;
   --color-background-light: #fff;
   --color-banner-bg: #1c1c1c;
@@ -15,7 +15,6 @@
   --color-card-bg: #f3f3f3;
   --color-sobre-bg: #fafafa;
 
-  /* Tipografia */
   --font-family-base: Arial, Helvetica, sans-serif;
   --font-size-small: 0.9rem;
   --font-size-base: 1rem;
@@ -24,7 +23,7 @@
   --font-size-xlarge: 1.8rem;
   --font-size-banner: 2rem;
 
-  /* Espaçamento */
+
   --spacing-xs: 5px;
   --spacing-sm: 10px;
   --spacing-md: 15px;
@@ -32,14 +31,14 @@
   --spacing-xl: 30px;
   --spacing-xxl: 60px;
 
-  /* Bordas e sombras */
+
   --border-radius-sm: 8px;
   --border-radius-md: 10px;
   --box-shadow-sm: 0 5px 10px rgba(0,0,0,0.1);
   --box-shadow-md: 0 8px 16px rgba(0,0,0,0.1);
 }
 
-/* ====== RESET BÁSICO ====== */
+
 * {
   margin: 0;
   padding: 0;
@@ -53,7 +52,7 @@ body {
   line-height: 1.6;
 }
 
-/* ====== HEADER ====== */
+
 header {
   background-color: var(--color-header);
   color: var(--color-text-light);
@@ -61,14 +60,13 @@ header {
 }
 
 .logo {
-  height: 50px;   /* ajuste a altura da logo */
+  height: 50px;   
   width: auto;
-  margin-right: 2rem; /* separação do menu */
+  margin-right: 2rem; 
 }
 
 nav {
   display: flex;
-/*  justify-content: space-between; */
   align-items: center;
 }
 
@@ -92,10 +90,10 @@ nav a:hover {
 .user-menu {
   display: flex;
   gap: var(--spacing-lg);
-  margin-left: auto; /* empurra o menu do usuário para a direita */
+  margin-left: auto; 
 }
 
-/* ====== BANNER ====== */
+
 #banner {
   text-align: center;
   padding: var(--spacing-xxl) var(--spacing-lg);
@@ -119,13 +117,13 @@ nav a:hover {
   color: var(--color-text-light);
 }
 
-/* ====== SEÇÃO SOBRE ====== */
+
 #sobre {
   max-width: 1200px;
   margin: 80px auto;
   padding: 60px 40px;
-  background-color: #111; /* fundo escuro para destacar */
-  color: #fff;            /* texto branco */
+  background-color: #111; 
+  color: #fff;            
   text-align: center;
   border-radius: 12px;
   box-shadow: 0 4px 20px rgba(0, 0, 0, 0.4);
@@ -134,7 +132,7 @@ nav a:hover {
 #sobre h2 {
   font-size: 2.5rem;
   margin-bottom: 25px;
-  color: #ccff00; /* cor da marca */
+  color: #ccff00; 
   text-transform: uppercase;
   letter-spacing: 1px;
 }
@@ -148,23 +146,23 @@ nav a:hover {
 }
 
 #sobre strong {
-  color: #ccff00; /* destaque na cor da marca */
+  color: #ccff00; 
   font-weight: bold;
 }
 
 
 #filiados-banner {
-  position: relative; /* necessário para sobreposição */
+  position: relative;
 }
 
 .texto-filiados {
   position: absolute;
-  top: 50%;            /* centraliza verticalmente */
-  left: 5%;            /* distância da borda esquerda */
+  top: 50%;          
+  left: 5%;            
   transform: translateY(-50%);
   z-index: 10;
   max-width: 800px;
-  color: #fff;         /* texto claro sobre banner escuro */
+  color: #fff;       
 }
 
 .texto-filiados h2 {
@@ -183,19 +181,19 @@ nav a:hover {
 }
 
 .btn-filiado {
-  display: block;             /* transforma em bloco para centralizar */
-  width: fit-content;         /* largura mínima baseada no conteúdo */
-  padding: 16px 35px;         /* aumenta tamanho do botão */
-  margin: 0 auto;             /* centraliza horizontalmente */
+  display: block;             
+  width: fit-content;         
+  padding: 16px 35px;         
+  margin: 0 auto;             
   background-color: #ccff00;
   color: #111;
   font-weight: bold;
   font-family: 'Anantason', sans-serif;
   text-transform: uppercase;
-  font-size: 1.2rem;          /* aumenta o texto do botão */
+  font-size: 1.2rem;          
   border-radius: 15px;
   text-decoration: none;
-  text-align: center;         /* garante alinhamento do texto */
+  text-align: center;         
   transition: background-color 0.3s ease, transform 0.3s ease;
 }
 
@@ -204,10 +202,10 @@ nav a:hover {
   transform: translateY(-2px);
 }
 
-/* RESPONSIVO */
+
 @media (max-width: 768px) {
   .texto-filiados {
-    position: static;      /* texto abaixo do banner em mobile */
+    position: static;      
     transform: none;
     max-width: 90%;
     margin: 20px auto;
@@ -217,7 +215,7 @@ nav a:hover {
 
 
 
-/* ====== SEÇÃO PRODUTOS ====== */
+
 #produtos {
   padding: var(--spacing-xxl) var(--spacing-lg);
   text-align: center;
@@ -269,7 +267,7 @@ nav a:hover {
   color: var(--color-highlight);
 }
 
-/* ====== FOOTER ====== */
+
 footer {
   background-color: var(--color-footer);
   color: var(--color-text-light);
@@ -279,7 +277,7 @@ footer {
   font-size: var(--font-size-small);
 }
 
-/* ====== RESPONSIVIDADE ====== */
+
 @media (max-width: 768px) {
   nav ul {
     flex-direction: column;
