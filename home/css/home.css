@@ -13,6 +13,7 @@
   --color-highlight: #ffb703;
   --color-link-hover: #ccff00;
   --color-card-bg: #f3f3f3;
+  --color-card-bg-dark: #444;
   --color-sobre-bg: #fafafa;
 
   --font-family-base: Arial, Helvetica, sans-serif;
@@ -230,7 +231,7 @@ nav a:hover {
 
 .produto {
   display: inline-block;
-  background: var(--color-card-bg);
+  background: var(--color-card-bg-dark);
   padding: var(--spacing-lg);
   border-radius: var(--border-radius-md);
   margin: var(--spacing-sm);
@@ -257,7 +258,7 @@ nav a:hover {
 
 .produto p {
   font-size: var(--font-size-small);
-  color: var(--color-text-secondary);
+  color: var(--color-text-light);
   margin-bottom: var(--spacing-xs);
 }
 
@@ -288,3 +289,4 @@ footer {
   nav {
     flex-direction: column;
   }
+}

@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Tela de Login - Efeito Glass</title>
+  <style>
+    body {
+      margin: 0;
+      height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      background: url('https://images.unsplash.com/photo-1557682250-33bd709cbe85') no-repeat center/cover;
+      font-family: Arial, sans-serif;
+    }
+
+    .container {
+      width: 320px;
+      padding: 40px;
+      border-radius: 15px;
+      background: rgba(255, 255, 255, 0.1); /* transparência */
+      backdrop-filter: blur(12px); /* desfoque */
+      -webkit-backdrop-filter: blur(12px); /* compatibilidade Safari */
+      border: 1px solid rgba(255, 255, 255, 0.3);
+      box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
+      text-align: center;
+      color: #fff;
+    }
+
+    .container h2 {
+      margin-bottom: 20px;
+    }
+
+    .container input {
+      width: 100%;
+      padding: 10px;
+      margin: 10px 0;
+      border: none;
+      border-radius: 8px;
+      outline: none;
+      background-color: rgba(255, 255, 255, 0.2);
+      color: #fff;
+    }
+
+    .container button {
+      width: 100%;
+      padding: 10px;
+      border: none;
+      border-radius: 8px;
+      background-color: #00ff88;
+      color: #1c1c1c;
+      font-weight: bold;
+      cursor: pointer;
+      transition: 0.3s;
+    }
+
+    .container button:hover {
+      background-color: #00cc6a;
+    }
+
+    ::placeholder {
+      color: #ddd;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h2>Login</h2>
+    <input type="text" placeholder="Usuário" />
+    <input type="password" placeholder="Senha" />
+    <button>Entrar</button>
+  </div>
+</body>
+</html>

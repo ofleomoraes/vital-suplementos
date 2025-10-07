@@ -5,7 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1" />
     <link href="https://fonts.googleapis.com/css2?family=Anantason&display=swap" rel="stylesheet">
   <link rel="shortcut icon" href="/home/img/Cópia de VITAL RECIFE.png" type="image/x-icon">
-  <link rel="stylesheet" href="../login/css/login.css">
+  <link rel="stylesheet" href="../cadastro/css/cadastro.css">
   <link rel="stylesheet" href="../global.css">
   <title>Vital Recife</title>
 
@@ -31,10 +31,9 @@
   </header>
 
   <main>
-    <div class="background-container">
-    <div class="login-container">
-      <h2>Login</h2>
-      <form id="loginForm">
+    <div class="cadastro-container">
+      <h2>Cadastro</h2>
+      <form id="cadastroForm">
         <div class="input-group">
           <input placeholder="E-mail" type="email" id="email" name="email" required />
         </div>
@@ -45,20 +44,19 @@
           <button type="submit">Entrar</button>
         </div>
         <div class="links">
-          <a href="/cadastro/cadastro.html">Criar uma conta</a>
+          <a href="/login/login.html">Fazer Login</a>
         </div>
         <div class="links">
           <a href="/esqueci-senha.html">Esqueci minha senha</a>
         </div>
       </form>
     </div>
-    </div>
   </main>
 
 
   <script>
     // Função para simular autenticação e redirecionamento
-    document.getElementById('loginForm').addEventListener('submit', function(e) {
+    document.getElementById('cadastroForm').addEventListener('submit', function(e) {
       e.preventDefault();
 
       const email = e.target.email.value.trim();
@@ -72,7 +70,7 @@
 
       // Simulação: usuário e senha fixos para teste
       if (email === 'usuario@exemplo.com' && password === '123456') {
-        alert('Login realizado com sucesso!');
+        alert('Cadastro realizado com sucesso!');
         window.location.href = 'dashboard.html'; // Redireciona para página principal
       } else {
         alert('E-mail ou senha inválidos.');
