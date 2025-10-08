@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <title><vital-suplementos></vital-suplementos></title>
+</head>
+<body>
+<header>
+    <nav>
+      <ul>
+        <li><a href="index.html">Início</a></li>
+        <li><a href="dashboard.html">Dashboard</a></li>
+        <li><a href="indicacao.html">Indicação</a></li>
+        <li><a href="gamificacao.html">Gamificação</a></li>
+        <li><a href="produtos.html">Produtos</a></li>
+        <li><a href="login.html">Login</a></li>
+        <li><a href="cadastro.html">Cadastro</a></li>
+      </ul>
+    </nav>
+    </header>
+
+  <h1>Cadastro de Cliente</h1>
+
+  <form action="processa_cadastro.php" method="POST">
+    <label for="nome">Nome Completo:</label>
+    <input type="text" id="nome" name="nome" required><br>
+
+    <label for="email">E-mail:</label>
+    <input type="email" id="email" name="email" required><br>
+
+    <label for="senha">Senha:</label>
+    <input type="password" id="senha" name="senha" required><br>
+      <label for="Confirmar Senha">Confirmar Senha:</label>
+    <input type="Confirmar Senha" id="senha" name="Confirmar Senha" required><br>
+    <label for="telefone">Telefone:</label>
+    <input type="tel" id="telefone" name="telefone"><br>
+
+    <button type="submit">Cadastrar</button>
+  </form>
+ 
+  <footer>
+    <p>&copy; 2025 Loja de Suplementos. Todos os direitos reservados.</p>   
+</footer>
+</body>
+</html>

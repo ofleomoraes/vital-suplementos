@@ -1,0 +1,92 @@
+
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background-color: #f9fafb;
+  color: #222;
+  padding: 20px;
+}
+
+
+.gamificacao-container {
+  max-width: 600px;
+  margin: 0 auto;
+  background-color: #ffffff;
+  border-radius: 12px;
+  padding: 30px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+}
+
+
+.gamificacao-container h1,
+.gamificacao-container h2 {
+  text-align: center;
+  color: #2c3e50;
+  margin-bottom: 20px;
+}
+
+
+.pontuacao {
+  font-size: 2rem;
+  font-weight: 700;
+  color: #27ae60;
+  text-align: center;
+}
+
+
+.recompensas ul {
+  list-style-type: none;
+  padding-left: 0;
+}
+
+.recompensas li {
+  background-color: #eaf8f1;
+  border-left: 5px solid #27ae60;
+  margin: 10px 0;
+  padding: 10px 15px;
+  border-radius: 6px;
+  font-size: 1rem;
+}
+
+
+.barra-progresso {
+  width: 100%;
+  height: 20px;
+  background-color: #e0e0e0;
+  border-radius: 10px;
+  overflow: hidden;
+  margin: 15px 0;
+}
+
+.barra-progresso .preenchido {
+  height: 100%;
+  background-color: #3498db;
+  width: 0; /* Atualizar dinamicamente */
+  transition: width 0.5s ease;
+  border-radius: 10px 0 0 10px;
+}
+
+/* Texto abaixo da barra */
+.progresso p {
+  text-align: center;
+  font-weight: 600;
+  color: #555;
+}
+
+/* Regras */
+.regras p {
+  font-size: 1rem;
+  font-weight: 600;
+  text-align: center;
+  margin-bottom: 10px;
+}
+
+.regras ul {
+  list-style-type: disc;
+  margin-left: 20px;
+}
+
+.regras li {
+  margin-bottom: 8px;
+  font-size: 0.95rem;
+  color: #444;
+}
