@@ -214,9 +214,6 @@ nav a:hover {
   }
 }
 
-
-
-
 #produtos {
   padding: var(--spacing-xxl) var(--spacing-lg);
   text-align: center;
@@ -237,6 +234,9 @@ nav a:hover {
   margin: var(--spacing-sm);
   width: 220px;
   transition: transform 0.3s, box-shadow 0.3s;
+  background: rgba(255,255,255,0.1);
+  backdrop-filter: blur(12px);
+  border: 1px solid rgba(255,255,255,0.3);
 }
 
 .produto:hover {
@@ -253,7 +253,7 @@ nav a:hover {
 .produto h3 {
   font-size: var(--font-size-large);
   margin-bottom: var(--spacing-xs);
-  color: var(--color-text-dark);
+  color: var(--color-text-light);
 }
 
 .produto p {

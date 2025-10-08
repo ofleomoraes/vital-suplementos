@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="description" content="Dashboard da loja Vital Suplementos - vendas, pedidos, lucro e usuários.">
+  <link rel="stylesheet" href="../dashboard/css/dashboard.css">
+  <title>Dashboard - Vital Recife</title>
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+
+<header>
+    <nav>
+      <img src="/dashboard/img/icone-vital-recife.png" alt="Vital Suplementos" class="logo">
+      <ul class="menu">
+        <li><a href="/home/index.html">Início</a></li>
+        <li><a href="/dashboard/dashboard.html">Dashboard</a></li>
+        <li><a href="/indicacao.html">Indicação</a></li>
+        <li><a href="/gamificacao/gamificacao.html">Gamificação</a></li>
+        <li><a href="produtos/produtos.html">Produtos</a></li>
+      </ul>
+      <ul class="user-menu">
+        <li><a href="login/login.html">Login</a></li>
+        <li><a href="cadastro/cadastro.html">Cadastro</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <section id="banner">
+    <img src="/dashboard/img/banner-dashbord.svg" alt="Banner da loja de suplementos" width="100%" />
+  </section>
+
+  <main>
+    <div class="dashboard-container">
+      <h2>SEU SCORE - VITAL RECIFE</h2>
+
+      <div class="cards">
+        <div class="card">
+          <h3>Vendas</h3>
+          <p>R$ 12.350</p>
+        </div>
+        <div class="card">
+          <h3>Usuários</h3>
+          <p>1.245</p>
+        </div>
+        <div class="card">
+          <h3>Pedidos</h3>
+          <p>872</p>
+        </div>
+        <div class="card">
+          <h3>Lucro</h3>
+          <p>R$ 4.210</p>
+        </div>
+      </div>
+
+      <div class="chart-container">
+        <canvas id="graficoVendas"></canvas>
+      </div>
+    </div>
+  </main>
+
+  <footer>
+    <p>&copy; 2025 Loja de Suplementos. Todos os direitos reservados.</p>
+  </footer>
+
+  <script>
+    const ctx = document.getElementById('graficoVendas').getContext('2d');
+    new Chart(ctx, {
+      type: 'line',
+      data: {
+        labels: ['Jan', 'Fev', 'Mar', 'Abr', 'Mai', 'Jun'],
+        datasets: [{
+          label: 'Vendas Mensais',
+          data: [1200, 1800, 900, 2400, 2000, 3000],
+          borderColor: '#ccff00',
+          backgroundColor: 'rgba(204, 255, 0, 0.15)',
+          fill: true,
+          tension: 0.4
+        }]
+      },
+      options: {
+        responsive: true,
+        plugins: {
+          legend: { display: false }
+        },
+        scales: {
+          x: { ticks: { color: '#fff' } },
+          y: { ticks: { color: '#fff' } }
+        }
+      }
+    });
+  </script>
+
+</body>
+</html>

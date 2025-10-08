@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="description" content="Sistema de Gamificação por Indicação">
+
+  <link rel="stylesheet" href="../gamificacao/css/gamificacao.css">
+  <title>Gamificação - Vital Recife</title>
+</head>
+<body>
+
+  <header>
+    <nav>
+      <img src="/gamificacao/img/icone-vital-recife.png" alt="Vital Suplementos" class="logo">
+      <ul class="menu">
+        <li><a href="/home/index.html">Início</a></li>
+        <li><a href="/dashboard/dashboard.html">Dashboard</a></li>
+        <li><a href="/indicacao.html">Indicação</a></li>
+        <li><a href="/gamificacao/gamificacao.html">Gamificação</a></li>
+        <li><a href="produtos/produtos.html">Produtos</a></li>
+      </ul>
+      <ul class="user-menu">
+        <li><a href="login/login.html">Login</a></li>
+        <li><a href="cadastro/cadastro.html">Cadastro</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+  <div class="dashboard-container">
+    <h2>Gamificação por Indicação</h2>
+
+    <!-- Link de indicação -->
+    <div class="card">
+      <h3>Seu link de indicação</h3>
+      <input type="text" id="linkIndicacao" value="https://vitalrecife.com/indicar?ref=SEUID123" readonly>
+      <button onclick="copiarLink()" class="copiar-btn">Copiar Link</button>
+      <p id="mensagemCopiado">Link copiado!</p>
+    </div>
+
+    <!-- Cards principais -->
+    <div class="cards">
+      <div class="card">
+        <h3>Acessos no seu link</h3>
+        <p id="acessosLink">57</p>
+      </div>
+      <div class="card">
+        <h3>Pontos acumulados</h3>
+        <p id="pontosAcumulados">570</p>
+      </div>
+    </div>
+
+    <!-- Tabela de Pontos -->
+    <div class="tabela-pontos">
+      <h3>Pontuação por Semana</h3>
+      <ul>
+        <li><strong>Semana 1:</strong> 120 pontos</li>
+        <li><strong>Semana 2:</strong> 150 pontos</li>
+        <li><strong>Semana 3:</strong> 180 pontos</li>
+        <li><strong>Semana 4:</strong> 120 pontos</li>
+      </ul>
+    </div>
+
+    <!-- Conquistas -->
+    <div class="card">
+      <h3>Conquistas</h3>
+      <ul class="conquistas">
+        <li><span class="badge conquistado">🏆 100 Pontos</span></li>
+        <li><span class="badge conquistado">🎯 3 Indicações</span></li>
+        <li><span class="badge">🚀 1000 Pontos</span></li>
+      </ul>
+    </div>
+
+    <!-- Progresso até próxima meta -->
+    <div class="card">
+      <h3>Progresso até próxima meta</h3>
+      <div class="barra-progresso">
+        <div class="progresso" style="width: 57%;"></div>
+      </div>
+      <p>570 / 1000 pontos</p>
+    </div>
+
+    <!-- Missões da Semana -->
+    <div class="card">
+      <h3>Missões da Semana</h3>
+      <ul class="missoes">
+        <li><input type="checkbox" disabled checked> Indicar 1 amigo</li>
+        <li><input type="checkbox" disabled> Atingir 600 pontos</li>
+        <li><input type="checkbox" disabled> Compartilhar o link nas redes</li>
+      </ul>
+    </div>
+
+    <!-- Ranking -->
+    <div class="card">
+      <h3>Ranking</h3>
+      <ol class="ranking">
+        <li><strong>Ana P.</strong> - 1200 pts</li>
+        <li><strong>Carlos M.</strong> - 980 pts</li>
+        <li><strong class="voce">Você</strong> - 570 pts</li>
+      </ol>
+    </div>
+    </div>
+  </main>
+
+
+  <footer>
+    <p>&copy; 2025 Loja de Suplementos. Todos os direitos reservados.</p>
+  </footer>
+
+  <script>
+    function copiarLink() {
+      const linkInput = document.getElementById('linkIndicacao');
+      linkInput.select();
+      linkInput.setSelectionRange(0, 99999);
+      document.execCommand("copy");
+
+      const mensagem = document.getElementById('mensagemCopiado');
+      mensagem.style.display = 'block';
+      setTimeout(() => mensagem.style.display = 'none', 3000);
+    }
+  </script>
+
+</body>
+</html>

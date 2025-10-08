@@ -14,13 +14,13 @@
 
   <header>
     <nav>
-      <img src="/home/img/vital-logo.png" alt="Vital Suplementos" class="logo">
+      <img src="/cadastro/img/icone-vital-recife.png" alt="Vital Suplementos" class="logo">
 
       <ul class="menu">
         <li><a href="/home/index.html">Início</a></li>
-        <li><a href="dashboard.html">Dashboard</a></li>
-        <li><a href="indicacao.html">Indicação</a></li>
-        <li><a href="gamificacao.html">Gamificação</a></li>
+        <li><a href="/dashboard/dashboard.html">Dashboard</a></li>
+        <li><a href="/indicacao.html">Indicação</a></li>
+        <li><a href="/gamificacao/gamificacao.html">Gamificação</a></li>
         <li><a href="/produtos/produtos.html">Produtos</a></li>
       </ul>
       <ul class="user-menu">
@@ -35,10 +35,19 @@
       <h2>Cadastro</h2>
       <form id="cadastroForm">
         <div class="input-group">
+          <input placeholder="Nome Completo" type="text" id="nomeCompleto" name="nomeCompleto" required />
+        </div>
+        <div class="input-group">
           <input placeholder="E-mail" type="email" id="email" name="email" required />
         </div>
         <div class="input-group">
-          <input placeholder="Senha" type="password" id="password" name="password" required />
+          <input placeholder="Telefone" type="tel" id="telefone" name="telefone" required />
+        </div>
+        <div class="input-group">
+          <input placeholder="Senha" type="password" id="senha" name="senha" required />
+        </div>
+        <div class="input-group">
+          <input placeholder="Confirmar Senha" type="password" id="confirmarSenha" name="confirmarSenha" required />
         </div>
         <div class="button-group">
           <button type="submit">Entrar</button>

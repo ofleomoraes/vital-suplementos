@@ -1,0 +1,284 @@
+/* ===== Variáveis Globais ===== */
+:root {
+
+  --color-background-dark: #1c1c1c;
+  --color-background-light: #fff;
+  --color-banner-bg: #1c1c1c;
+  --color-header: #111;
+  --color-footer: #111;
+  --color-text-dark: #111;
+  --color-text-light: #fff;
+  --color-text-medium: #444;
+  --color-text-secondary: #555;
+  --color-highlight: #ffb703;
+  --color-link-hover: #ccff00;
+  --color-card-bg: #f3f3f3;
+  --color-card-bg-dark: #444;
+  --color-sobre-bg: #fafafa;
+
+  --font-family-base: Arial, Helvetica, sans-serif;
+  --font-size-small: 0.9rem;
+  --font-size-base: 1rem;
+  --font-size-medium: 1.1rem;
+  --font-size-large: 1.2rem;
+  --font-size-xlarge: 1.8rem;
+  --font-size-banner: 2rem;
+
+
+  --spacing-xs: 5px;
+  --spacing-sm: 10px;
+  --spacing-md: 15px;
+  --spacing-lg: 20px;
+  --spacing-xl: 30px;
+  --spacing-xxl: 60px;
+
+
+  --border-radius-sm: 8px;
+  --border-radius-md: 10px;
+  --box-shadow-sm: 0 5px 10px rgba(0,0,0,0.1);
+  --box-shadow-md: 0 8px 16px rgba(0,0,0,0.1);
+
+  --color-highlight: #ffb703;
+  --color-link-hover: #fb8500;
+  --color-text-light: #ffffff;
+  --color-text-dark: #000000;
+  --border-radius-sm: 8px;
+  --spacing-sm: 10px;
+  --spacing-lg: 20px;
+  --font-size-small: 0.875rem;
+  --font-size-base: 1rem;
+  --background: #1a1a1a;
+}
+
+/* ===== Reset Básico ===== */
+body {
+  margin: 0;
+  padding: 0;
+  font-family: Arial, sans-serif;
+  background-color: var(--background);
+  color: var(--color-text-light);
+}
+
+/* ===== Header e Navegação ===== */
+header {
+  background-color: #000;
+  padding: 20px;
+}
+
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.logo {
+  height: 40px;
+}
+
+.menu,
+.user-menu {
+  list-style: none;
+  display: flex;
+  gap: 20px;
+  padding: 0;
+  margin: 0;
+}
+
+.menu li a,
+.user-menu li a {
+  text-decoration: none;
+  color: var(--color-text-light);
+  font-weight: bold;
+}
+
+/* ===== Main Content ===== */
+.dashboard-container {
+  max-width: 800px;
+  margin: 40px auto;
+  padding: 20px;
+}
+
+.card {
+  background-color: rgba(255, 255, 255, 0.05);
+  padding: 20px;
+  border-radius: 10px;
+  margin-bottom: 20px;
+}
+
+.cards {
+  display: flex;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+.cards .card {
+  flex: 1;
+  min-width: 150px;
+  text-align: center;
+}
+
+/* ===== Estilo do Input ===== */
+#linkIndicacao {
+  background-color: rgba(255, 255, 255, 0.1);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  color: var(--color-text-light);
+  font-weight: bold;
+  border-radius: var(--border-radius-sm);
+  outline: none;
+  padding: 10px;
+  width: 100%;
+  font-size: 1rem;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  transition: border-color 0.3s;
+}
+
+#linkIndicacao:focus {
+  border-color: var(--color-highlight);
+}
+
+/* ===== Botão ===== */
+.copiar-btn {
+  background-color: var(--color-link-hover);
+  color: var(--color-text-dark);
+  font-weight: bold;
+  padding: var(--spacing-sm) var(--spacing-lg);
+  border: none;
+  border-radius: var(--border-radius-sm);
+  cursor: pointer;
+  transition: background-color 0.3s, color 0.3s;
+}
+
+.copiar-btn:hover {
+  background-color: var(--color-link-hover);
+  color: var(--color-text-dark);
+}
+
+/* ===== Mensagem de Copiado ===== */
+#mensagemCopiado {
+  font-size: var(--font-size-small);
+  margin-top: var(--spacing-sm);
+  color: var(--color-link-hover);
+  display: none;
+}
+
+/* ===== Nova Lista de Pontuação ===== */
+.tabela-pontos {
+  background-color: rgba(255, 255, 255, 0.05);
+  padding: 20px;
+  border-radius: 10px;
+  margin-top: 40px;
+}
+
+.tabela-pontos h3 {
+  margin-bottom: 15px;
+  color: var(--color-highlight);
+}
+
+.tabela-pontos ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.tabela-pontos li {
+  margin-bottom: 10px;
+  font-size: 1rem;
+  color: var(--color-text-light);
+}
+
+/* ===== Footer ===== */
+footer {
+  text-align: center;
+  padding: 20px;
+  background-color: #000;
+  color: var(--color-text-light);
+  margin-top: 40px;
+}
+
+/* ===== Responsivo ===== */
+@media (max-width: 768px) {
+  .cards {
+    flex-direction: column;
+  }
+
+  #linkIndicacao {
+    font-size: var(--font-size-base);
+  }
+
+  .copiar-btn {
+    width: 100%;
+  }
+}
+
+/* ===== Conquistas ===== */
+.conquistas {
+  list-style: none;
+  padding: 0;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.badge {
+  background-color: rgba(255, 255, 255, 0.1);
+  border: 1px solid #555;
+  border-radius: 5px;
+  padding: 8px 12px;
+  font-size: 0.9rem;
+  color: #aaa;
+}
+
+.badge.conquistado {
+  border-color: var(--color-highlight);
+  color: var(--color-highlight);
+  font-weight: bold;
+}
+
+/* ===== Progresso ===== */
+.barra-progresso {
+  width: 100%;
+  height: 20px;
+  background-color: #333;
+  border-radius: 10px;
+  overflow: hidden;
+  margin-bottom: 10px;
+}
+
+.progresso {
+  height: 100%;
+  background-color: var(--color-highlight);
+  width: 0%;
+  transition: width 0.5s;
+}
+
+/* ===== Missões ===== */
+.missoes {
+  list-style: none;
+  padding: 0;
+}
+
+.missoes li {
+  margin-bottom: 10px;
+  font-size: 0.95rem;
+}
+
+/* ===== Ranking ===== */
+.ranking {
+  padding-left: 20px;
+  margin: 0;
+  font-size: 0.95rem;
+}
+
+.ranking li {
+  margin-bottom: 8px;
+}
+
+.ranking li strong {
+  color: var(--color-highlight);
+}
+
+.ranking .voce {
+  color: gold;
+}
