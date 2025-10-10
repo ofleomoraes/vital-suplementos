@@ -1,111 +1,119 @@
-/* ===== Variáveis Globais ===== */
+/* ======== VARIÁVEIS GLOBAIS ======== */
 :root {
-
   --color-background-dark: #1c1c1c;
   --color-background-light: #fff;
-  --color-banner-bg: #1c1c1c;
   --color-header: #111;
   --color-footer: #111;
   --color-text-dark: #111;
   --color-text-light: #fff;
-  --color-text-medium: #444;
-  --color-text-secondary: #555;
+  --color-text-medium: #ccc;
   --color-highlight: #ffb703;
   --color-link-hover: #ccff00;
-  --color-card-bg: #f3f3f3;
-  --color-card-bg-dark: #444;
-  --color-sobre-bg: #fafafa;
+  --color-card-bg: rgba(255, 255, 255, 0.05);
 
-  --font-family-base: Arial, Helvetica, sans-serif;
+  --font-family-base: 'Poppins', Arial, sans-serif;
   --font-size-small: 0.9rem;
   --font-size-base: 1rem;
-  --font-size-medium: 1.1rem;
-  --font-size-large: 1.2rem;
-  --font-size-xlarge: 1.8rem;
-  --font-size-banner: 2rem;
-
+  --font-size-medium: 1.2rem;
+  --font-size-large: 1.6rem;
+  --font-size-xlarge: 2rem;
 
   --spacing-xs: 5px;
   --spacing-sm: 10px;
   --spacing-md: 15px;
-  --spacing-lg: 20px;
-  --spacing-xl: 30px;
-  --spacing-xxl: 60px;
-
+  --spacing-lg: 25px;
+  --spacing-xl: 40px;
 
   --border-radius-sm: 8px;
   --border-radius-md: 10px;
-  --box-shadow-sm: 0 5px 10px rgba(0,0,0,0.1);
-  --box-shadow-md: 0 8px 16px rgba(0,0,0,0.1);
-
-  --color-highlight: #ffb703;
-  --color-link-hover: #fb8500;
-  --color-text-light: #ffffff;
-  --color-text-dark: #000000;
-  --border-radius-sm: 8px;
-  --spacing-sm: 10px;
-  --spacing-lg: 20px;
-  --font-size-small: 0.875rem;
-  --font-size-base: 1rem;
-  --background: #1a1a1a;
+  --box-shadow-sm: 0 5px 10px rgba(0,0,0,0.2);
+  --box-shadow-md: 0 8px 16px rgba(0,0,0,0.25);
 }
 
-/* ===== Reset Básico ===== */
-body {
+/* ======== RESET ======== */
+* {
   margin: 0;
   padding: 0;
-  font-family: Arial, sans-serif;
-  background-color: var(--background);
-  color: var(--color-text-light);
+  box-sizing: border-box;
+  font-family: var(--font-family-base);
 }
 
-/* ===== Header e Navegação ===== */
+body {
+  background-color: var(--color-background-dark);
+  color: var(--color-text-light);
+  line-height: 1.6;
+}
+
+/* ======== HEADER E NAVEGAÇÃO ======== */
 header {
-  background-color: #000;
-  padding: 20px;
+  background-color: var(--color-header);
+  padding: var(--spacing-md) var(--spacing-xl);
+  box-shadow: var(--box-shadow-sm);
 }
 
 nav {
   display: flex;
-  justify-content: space-between;
   align-items: center;
-  flex-wrap: wrap;
 }
 
 .logo {
-  height: 40px;
+  height: 45px;
+  margin-right: 2rem;
 }
 
-.menu,
-.user-menu {
+nav ul {
   list-style: none;
   display: flex;
-  gap: 20px;
-  padding: 0;
-  margin: 0;
+  gap: var(--spacing-lg);
 }
 
-.menu li a,
-.user-menu li a {
-  text-decoration: none;
+nav a {
   color: var(--color-text-light);
-  font-weight: bold;
+  text-decoration: none;
+  font-weight: 500;
+  transition: color 0.3s;
 }
 
-/* ===== Main Content ===== */
+nav a:hover {
+  color: var(--color-link-hover);
+}
+
+.user-menu {
+  display: flex;
+  gap: var(--spacing-lg);
+  margin-left: auto;
+}
+
+/* ======== CONTEÚDO PRINCIPAL ======== */
 .dashboard-container {
-  max-width: 800px;
-  margin: 40px auto;
+  max-width: 900px;
+  margin: 50px auto;
   padding: 20px;
 }
 
+.dashboard-container h2 {
+  font-size: var(--font-size-xlarge);
+  color: var(--color-text-light);
+  text-align: center;
+  margin-bottom: var(--spacing-lg);
+}
+
+/* ======== CARD PADRÃO ======== */
 .card {
-  background-color: rgba(255, 255, 255, 0.05);
-  padding: 20px;
-  border-radius: 10px;
+  background-color: var(--color-card-bg);
+  padding: 25px;
+  border-radius: var(--border-radius-md);
   margin-bottom: 20px;
+  box-shadow: var(--box-shadow-sm);
 }
 
+.card h3 {
+  color: var(--color-text-light);
+  margin-bottom: 15px;
+  font-size: var(--font-size-medium);
+}
+
+/* ======== GRUPO DE CARDS ======== */
 .cards {
   display: flex;
   gap: 20px;
@@ -114,11 +122,12 @@ nav {
 
 .cards .card {
   flex: 1;
-  min-width: 150px;
   text-align: center;
+  min-width: 180px;
+  margin-top: 20px;
 }
 
-/* ===== Estilo do Input ===== */
+/* ======== INPUT DO LINK ======== */
 #linkIndicacao {
   background-color: rgba(255, 255, 255, 0.1);
   border: 1px solid rgba(255, 255, 255, 0.2);
@@ -130,7 +139,7 @@ nav {
   width: 100%;
   font-size: 1rem;
   margin-top: 10px;
-  margin-bottom: 10px;
+  margin-bottom: 15px;
   transition: border-color 0.3s;
 }
 
@@ -138,7 +147,7 @@ nav {
   border-color: var(--color-highlight);
 }
 
-/* ===== Botão ===== */
+/* ======== BOTÃO ======== */
 .copiar-btn {
   background-color: var(--color-link-hover);
   color: var(--color-text-dark);
@@ -147,84 +156,56 @@ nav {
   border: none;
   border-radius: var(--border-radius-sm);
   cursor: pointer;
-  transition: background-color 0.3s, color 0.3s;
+  transition: background-color 0.3s ease, transform 0.3s ease;
 }
 
 .copiar-btn:hover {
-  background-color: var(--color-link-hover);
-  color: var(--color-text-dark);
+  background-color: #aadd00;
+  transform: translateY(-2px);
 }
 
-/* ===== Mensagem de Copiado ===== */
 #mensagemCopiado {
   font-size: var(--font-size-small);
-  margin-top: var(--spacing-sm);
   color: var(--color-link-hover);
   display: none;
+  margin-top: 10px;
 }
 
-/* ===== Nova Lista de Pontuação ===== */
+/* ======== TABELA DE PONTOS ======== */
 .tabela-pontos {
-  background-color: rgba(255, 255, 255, 0.05);
+  background-color: var(--color-card-bg);
+  border-radius: var(--border-radius-md);
   padding: 20px;
-  border-radius: 10px;
-  margin-top: 40px;
 }
 
 .tabela-pontos h3 {
-  margin-bottom: 15px;
-  color: var(--color-highlight);
+  color: var(--color-text-light);
+  margin-bottom: 10px;
 }
 
 .tabela-pontos ul {
   list-style: none;
   padding: 0;
-  margin: 0;
 }
 
 .tabela-pontos li {
-  margin-bottom: 10px;
-  font-size: 1rem;
-  color: var(--color-text-light);
+  margin-bottom: 8px;
+  color: var(--color-text-medium);
 }
 
-/* ===== Footer ===== */
-footer {
-  text-align: center;
-  padding: 20px;
-  background-color: #000;
-  color: var(--color-text-light);
-  margin-top: 40px;
-}
-
-/* ===== Responsivo ===== */
-@media (max-width: 768px) {
-  .cards {
-    flex-direction: column;
-  }
-
-  #linkIndicacao {
-    font-size: var(--font-size-base);
-  }
-
-  .copiar-btn {
-    width: 100%;
-  }
-}
-
-/* ===== Conquistas ===== */
+/* ======== CONQUISTAS ======== */
 .conquistas {
   list-style: none;
-  padding: 0;
   display: flex;
   flex-wrap: wrap;
   gap: 10px;
+  padding: 0;
 }
 
 .badge {
   background-color: rgba(255, 255, 255, 0.1);
   border: 1px solid #555;
-  border-radius: 5px;
+  border-radius: 6px;
   padding: 8px 12px;
   font-size: 0.9rem;
   color: #aaa;
@@ -236,7 +217,7 @@ footer {
   font-weight: bold;
 }
 
-/* ===== Progresso ===== */
+/* ======== BARRA DE PROGRESSO ======== */
 .barra-progresso {
   width: 100%;
   height: 20px;
@@ -248,12 +229,12 @@ footer {
 
 .progresso {
   height: 100%;
-  background-color: var(--color-highlight);
+  background-color: var(--color-link-hover);
   width: 0%;
   transition: width 0.5s;
 }
 
-/* ===== Missões ===== */
+/* ======== MISSÕES ======== */
 .missoes {
   list-style: none;
   padding: 0;
@@ -264,10 +245,9 @@ footer {
   font-size: 0.95rem;
 }
 
-/* ===== Ranking ===== */
+/* ======== RANKING ======== */
 .ranking {
   padding-left: 20px;
-  margin: 0;
   font-size: 0.95rem;
 }
 
@@ -280,5 +260,119 @@ footer {
 }
 
 .ranking .voce {
-  color: gold;
+  color: var(--color-link-hover);
+}
+
+.resgate-container {
+  padding: 50px 10%;
+  display: flex;
+  flex-direction: column;
+  gap: 50px;
+}
+
+/* Saldo */
+.saldo {
+  text-align: center;
+}
+
+.saldo h2 {
+  font-size: 1.8rem;
+  margin-bottom: 20px;
+  color: #aadd00;
+}
+
+.saldo-card {
+  background: rgba(255,255,255,0.1);
+  border: 1px solid rgba(255,255,255,0.2);
+  border-radius: 16px;
+  padding: 30px;
+  display: inline-block;
+  backdrop-filter: blur(12px);
+  box-shadow: 0 4px 14px rgba(0,0,0,0.2);
+}
+
+.saldo-card h1 {
+  font-size: 2.5rem;
+  color: #aadd00;
+  margin: 10px 0 0;
+}
+
+/* Container principal */
+.resgate-container {
+  padding: 60px 10%;
+  display: flex;
+  flex-direction: column;
+  gap: 60px;
+}
+
+/* Saldo */
+.saldo {
+  text-align: center;
+}
+
+.saldo h2 {
+  font-size: 2rem;
+  margin-bottom: 25px;
+  color: #aadd00;
+}
+
+.saldo-card {
+  display: inline-block;
+  padding: 40px 60px;
+  background: rgba(255,255,255,0.05);
+  border: 1px solid rgba(255,255,255,0.2);
+  border-radius: 24px;
+  backdrop-filter: blur(15px);
+  box-shadow: 0 8px 30px rgba(0,0,0,0.4);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.saldo-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 12px 40px rgba(0,0,0,0.5);
+}
+
+.saldo-card p {
+  font-size: 1.1rem;
+  color: #ccc;
+}
+
+.saldo-card h1 {
+  font-size: 3rem;
+  color: #aadd00;
+  margin-top: 10px;
+}
+
+
+
+
+
+
+/* ======== FOOTER ======== */
+footer {
+  background-color: var(--color-footer);
+  text-align: center;
+  padding: 20px;
+  color: var(--color-text-light);
+  font-size: var(--font-size-small);
+  margin-top: 50px;
+}
+
+/* ======== RESPONSIVIDADE ======== */
+@media (max-width: 768px) {
+  nav ul {
+    gap: var(--spacing-sm);
+  }
+
+  .cards {
+    flex-direction: column;
+  }
+
+  .copiar-btn {
+    width: 100%;
+  }
+
+  .dashboard-container {
+    padding: 10px;
+  }
 }

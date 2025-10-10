@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Painel de Indicações</title>
+  <link rel="stylesheet" href="/indicacao/css/indicacao.css">
+</head>
+<body>
+
+    <header>
+        <nav>
+            <img src="/home/img/vital-logo.png" alt="Vital Suplementos" class="logo">
+
+            <ul class="menu">
+                <li><a href="/home/index.html">Início</a></li>
+                <li><a href="/dashboard/dashboard.html">Dashboard</a></li>
+                <li><a href="/indicacao/indicacao.html">Indicação</a></li>
+                <li><a href="/gamificacao/gamificacao.html">Gamificação</a></li>
+                <li><a href="/produtos/produtos.html">Produtos</a></li>
+            </ul>
+            <ul class="user-menu">
+                <li><a href="/login/login.html">Login</a></li>
+                <li><a href="/cadastro/cadastro.html">Cadastro</a></li>
+            </ul>
+        </nav>
+  </header>
+
+  <div class="body">
+    <section class="title">
+        <h1>Programa de Indicações</h1>
+        <p>Indique amigos e ganhe recompensas exclusivas!</p>
+    </section>
+    <main class="container">
+
+        <!-- SEÇÃO DO LINK DE INDICAÇÃO -->
+        <section class="link-indicacao">
+        <h2>Seu link de indicação</h2>
+        <div class="link-box">
+            <input type="text" value="https://meusite.com/indique/akira" readonly>
+            <button class="btn copiar"><strong>Copiar link</strong></button>
+            <button class="btn compartilhar"><strong>Compartilhar</strong></button>
+        </div>
+        </section>
+
+        <!-- SEÇÃO DE ESTATÍSTICAS -->
+        <section class="estatisticas">
+        <h2>Suas estatísticas</h2>
+        <div class="cards">
+            <div class="card">
+            <h3>12</h3>
+            <p>Indicações enviadas</p>
+            </div>
+            <div class="card">
+            <h3>5</h3>
+            <p>Convertidas</p>
+            </div>
+            <div class="card">
+            <h3>41%</h3>
+            <p>Taxa de conversão</p>
+            </div>
+            <div class="card">
+            <h3>R$ 80,00</h3>
+            <p>Recompensas</p>
+            </div>
+        </div>
+        </section>
+
+        <!-- SEÇÃO DE MINHAS INDICAÇÕES -->
+        <section class="minhas-indicacoes">
+        <h2>Minhas indicações</h2>
+        <table>
+            <thead>
+            <tr>
+                <th>Nome</th>
+                <th>Data</th>
+                <th>Status</th>
+                <th>Recompensa</th>
+            </tr>
+            </thead>
+            <tbody>
+            <tr>
+                <td>João Silva</td>
+                <td>08/10/2025</td>
+                <td class="aprovado">Aprovado</td>
+                <td>R$ 10,00</td>
+            </tr>
+            <tr>
+                <td>Maria Alves</td>
+                <td>07/10/2025</td>
+                <td class="pendente">Pendente</td>
+                <td>—</td>
+            </tr>
+            <tr>
+                <td>Lucas Pereira</td>
+                <td>05/10/2025</td>
+                <td class="aprovado">Aprovado</td>
+                <td>R$ 10,00</td>
+            </tr>
+            </tbody>
+        </table>
+        </section>
+
+        <!-- SEÇÃO DE MATERIAIS -->
+        <section class="materiais">
+        <h2>Materiais de Divulgação</h2>
+        <div class="materiais-content">
+            <p>Baixe nossos materiais prontos para divulgar seu link:</p>
+            <div class="materiais-btns">
+            <button class="btn"><strong>Baixar imagens</strong></button>
+            <button class="btn"><strong>Copiar texto de divulgação</strong></button>
+            </div>
+        </div>
+        </section>
+    </main>
+  </div>
+
+<footer>
+    <p>&copy; 2025 Loja de Suplementos. Todos os direitos reservados.</p>
+</footer>
+</body>
+</html>

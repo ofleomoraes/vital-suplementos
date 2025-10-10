@@ -100,7 +100,7 @@ nav a:hover {
 
 /* Centraliza o conteúdo da página */
 main {
-  background: url(/login/img/background-login.svg);
+  background: url(/cadastro/img/banner-cadast.svg) no-repeat center center fixed;
   background-size: cover;
   flex: 1; /* Faz o main ocupar o espaço restante entre o header e o footer */
   display: flex;

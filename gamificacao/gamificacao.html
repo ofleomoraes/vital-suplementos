@@ -5,26 +5,27 @@
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="description" content="Sistema de Gamificação por Indicação">
 
-  <link rel="stylesheet" href="../gamificacao/css/gamificacao.css">
+  <link rel="stylesheet" href="/gamificacao/css/gamificacao.css">
   <title>Gamificação - Vital Recife</title>
 </head>
 <body>
 
-  <header>
-    <nav>
-      <img src="/gamificacao/img/icone-vital-recife.png" alt="Vital Suplementos" class="logo">
-      <ul class="menu">
-        <li><a href="/home/index.html">Início</a></li>
-        <li><a href="/dashboard/dashboard.html">Dashboard</a></li>
-        <li><a href="/indicacao.html">Indicação</a></li>
-        <li><a href="/gamificacao/gamificacao.html">Gamificação</a></li>
-        <li><a href="produtos/produtos.html">Produtos</a></li>
-      </ul>
-      <ul class="user-menu">
-        <li><a href="login/login.html">Login</a></li>
-        <li><a href="cadastro/cadastro.html">Cadastro</a></li>
-      </ul>
-    </nav>
+    <header>
+        <nav>
+            <img src="/home/img/vital-logo.png" alt="Vital Suplementos" class="logo">
+
+            <ul class="menu">
+                <li><a href="/home/index.html">Início</a></li>
+                <li><a href="/dashboard/dashboard.html">Dashboard</a></li>
+                <li><a href="/indicacao/indicacao.html">Indicação</a></li>
+                <li><a href="/gamificacao/gamificacao.html">Gamificação</a></li>
+                <li><a href="/produtos/produtos.html">Produtos</a></li>
+            </ul>
+            <ul class="user-menu">
+                <li><a href="/login/login.html">Login</a></li>
+                <li><a href="/cadastro/cadastro.html">Cadastro</a></li>
+            </ul>
+        </nav>
   </header>
 
   <main>
@@ -35,7 +36,7 @@
     <div class="card">
       <h3>Seu link de indicação</h3>
       <input type="text" id="linkIndicacao" value="https://vitalrecife.com/indicar?ref=SEUID123" readonly>
-      <button onclick="copiarLink()" class="copiar-btn">Copiar Link</button>
+      <button onclick="copiarLink()" class="copiar-btn"><strong>Copiar Link</strong></button>
       <p id="mensagemCopiado">Link copiado!</p>
     </div>
 
@@ -62,15 +63,25 @@
       </ul>
     </div>
 
-    <!-- Conquistas -->
-    <div class="card">
-      <h3>Conquistas</h3>
-      <ul class="conquistas">
-        <li><span class="badge conquistado">🏆 100 Pontos</span></li>
-        <li><span class="badge conquistado">🎯 3 Indicações</span></li>
-        <li><span class="badge">🚀 1000 Pontos</span></li>
-      </ul>
-    </div>
+    <section class="cards">
+      <div class="card">
+        <h3>💰 Saldo</h3>
+        <p class="valor">R$ 245,00</p>
+        <small>em comissões</small>
+      </div>
+
+      <div class="card">
+        <h3>👥 Indicações</h3>
+        <p class="valor">18</p>
+        <small>amigos cadastrados</small>
+      </div>
+
+      <div class="card">
+        <h3>🏆 Ranking</h3>
+        <p class="valor">#3</p>
+        <small>posição atual</small>
+      </div>
+    </section>
 
     <!-- Progresso até próxima meta -->
     <div class="card">
@@ -102,6 +113,7 @@
     </div>
     </div>
   </main>
+
 
 
   <footer>

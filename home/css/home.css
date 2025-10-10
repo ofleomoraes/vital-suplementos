@@ -12,6 +12,7 @@
   --color-text-secondary: #555;
   --color-highlight: #ffb703;
   --color-link-hover: #ccff00;
+   --link-text: #9eff45;
   --color-card-bg: #f3f3f3;
   --color-card-bg-dark: #444;
   --color-sobre-bg: #fafafa;
@@ -190,7 +191,6 @@ nav a:hover {
   color: #111;
   font-weight: bold;
   font-family: 'Anantason', sans-serif;
-  text-transform: uppercase;
   font-size: 1.2rem;          
   border-radius: 15px;
   text-decoration: none;
@@ -265,7 +265,8 @@ nav a:hover {
 .produto span {
   display: block;
   font-weight: bold;
-  color: var(--color-highlight);
+  color: var(--color-text-light);
+  font-size: 1.5rem;
 }
 
 

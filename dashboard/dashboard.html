@@ -7,29 +7,43 @@
   <link rel="stylesheet" href="../dashboard/css/dashboard.css">
   <title>Dashboard - Vital Recife</title>
   <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+  <style>
+    
+.dashboard-container,
+.container {
+  max-width: 1200px; 
+  margin: 0 auto; 
+  padding: 40px 5%; 
+  box-sizing: border-box;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+}
+  </style>
 </head>
 <body>
 
-<header>
-    <nav>
-      <img src="/dashboard/img/icone-vital-recife.png" alt="Vital Suplementos" class="logo">
-      <ul class="menu">
-        <li><a href="/home/index.html">Início</a></li>
-        <li><a href="/dashboard/dashboard.html">Dashboard</a></li>
-        <li><a href="/indicacao.html">Indicação</a></li>
-        <li><a href="/gamificacao/gamificacao.html">Gamificação</a></li>
-        <li><a href="produtos/produtos.html">Produtos</a></li>
-      </ul>
-      <ul class="user-menu">
-        <li><a href="login/login.html">Login</a></li>
-        <li><a href="cadastro/cadastro.html">Cadastro</a></li>
-      </ul>
-    </nav>
-  </header>
+    <header>
+        <nav>
+            <img src="/home/img/vital-logo.png" alt="Vital Suplementos" class="logo">
 
-  <section id="banner">
-    <img src="/dashboard/img/banner-dashbord.svg" alt="Banner da loja de suplementos" width="100%" />
-  </section>
+            <ul class="menu">
+                <li><a href="/home/index.html">Início</a></li>
+                <li><a href="/dashboard/dashboard.html">Dashboard</a></li>
+                <li><a href="/indicacao/indicacao.html">Indicação</a></li>
+                <li><a href="/gamificacao/gamificacao.html">Gamificação</a></li>
+                <li><a href="/produtos/produtos.html">Produtos</a></li>
+            </ul>
+            <ul class="user-menu">
+                <li><a href="/login/login.html">Login</a></li>
+                <li><a href="/cadastro/cadastro.html">Cadastro</a></li>
+            </ul>
+        </nav>
+  </header>
 
   <main>
     <div class="dashboard-container">
@@ -38,7 +52,7 @@
       <div class="cards">
         <div class="card">
           <h3>Vendas</h3>
-          <p>R$ 12.350</p>
+          <p>R$ 12.350,10</p>
         </div>
         <div class="card">
           <h3>Usuários</h3>
@@ -48,10 +62,6 @@
           <h3>Pedidos</h3>
           <p>872</p>
         </div>
-        <div class="card">
-          <h3>Lucro</h3>
-          <p>R$ 4.210</p>
-        </div>
       </div>
 
       <div class="chart-container">
@@ -59,6 +69,55 @@
       </div>
     </div>
   </main>
+
+  
+  <div class="container">
+
+     <section class="atalhos">
+      <h2><i class="fa-solid fa-bolt"></i> Atalhos de Ação</h2>
+
+      <div class="atalho-grid">
+        <button class="btn" onclick="gerarLink()">
+          <i class="fa-solid fa-link"></i>
+          <span><strong>Gerar meu link</strong></span>
+        </button>
+
+        <button class="btn" onclick="compartilharLink()">
+          <i class="fa-solid fa-share-nodes"></i>
+          <span><strong>Compartilhar link</strong></span>
+        </button>
+
+        <button class="btn" onclick="verEstatisticas()">
+          <i class="fa-solid fa-chart-line"></i>
+          <span><strong>Ver estatísticas</strong></span>
+        </button>
+
+        <button class="btn secondary" onclick="abrirMateriais()">
+          <i class="fa-solid fa-folder-open"></i>
+          <span><strong>Baixar materiais</strong></span>
+        </button>
+      </div>
+    </section>
+
+    <section class="dicas">
+      <h2><i class="fa-solid fa-lightbulb"></i> Área de Dicas e Conteúdo</h2>
+      <div class="dica-item">
+        <h3>🚀 Como aumentar suas indicações</h3>
+        <p>Aprenda técnicas simples de engajamento, como personalizar suas mensagens e escolher o melhor horário para divulgar. <a href="#">Ver guia completo</a></p>
+      </div>
+
+      <div class="dica-item">
+        <h3>📣 Materiais de divulgação prontos</h3>
+        <p>Acesse <a href="#">imagens otimizadas</a>, <a href="#">modelos de post</a> e <a href="#">mensagens para WhatsApp</a> para divulgar seu link mais rápido.</p>
+      </div>
+
+      <div class="dica-item">
+        <h3>📰 Notícias do programa</h3>
+        <p>Fique por dentro das campanhas, bônus de indicação e atualizações mensais. <a href="#">Ver últimas notícias</a></p>
+      </div>
+    </section>
+
+  </div>
 
   <footer>
     <p>&copy; 2025 Loja de Suplementos. Todos os direitos reservados.</p>
